@@ -32,10 +32,3 @@ favFoods.pop
 foodElement.innerHTML += `<br>${favFoods}`;
 
 
-/* Step 5 - Array */
-
-
-
-
-
-
