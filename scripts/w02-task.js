@@ -6,7 +6,7 @@
 const fullName = "Fernando Negreiros Henriques";
 const year = new Date();
 let currentYear = year.getFullYear();
-let profilePicture = ("images/perfil.png");
+let profilePicture = ('images/perfil.png');
 
 /* Step 3 - Element Variables */
 const nameElement = document.getElementById("name");
@@ -19,16 +19,14 @@ const imageElement = document.getElementById("img");
 
 nameElement.innerHTML = (`<strong>${fullName}</strong>`);
 yearElement.innerHTML = (`${currentYear}`);
-imageElement.setAttribute = ("src", `${profilePicture}`);
+imageElement.setAttribute = ("src", `profilePicture`);
 imageElement.setAttribute = ("alt", `Profile image of ${fullName}`);
 
 
 /* Step 5 - Array */
 let favFoods = [lazanha, feijoada, pizza, potato];
 foodElement.innerHTML += `<br>${favFoods}`;
-favFoods.shift()
+favFoods.shift();
 foodElement.innerHTML += `<br>${favFoods}`;
-favFoods.pop
+favFoods.pop();
 foodElement.innerHTML += `<br>${favFoods}`;
-
-
