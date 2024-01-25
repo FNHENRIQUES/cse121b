@@ -30,3 +30,5 @@ favFoods.shift();
 foodElement.innerHTML += `<br>${favFoods.join(`, `)}`;
 favFoods.pop();
 foodElement.innerHTML += `<br>${favFoods.join(`, `)}`;
+favFoods.push('sushi');
+foodElement.innerHTML += `<br>${favFoods.join(`, `)}`;
