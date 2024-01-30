@@ -55,7 +55,31 @@ const divideNumbers = () => {
 document.querySelector('#divideNumbers').addEventListener('click', divideNumbers);
 
 /* Decision Structure */
+const getTotalDue = () => {
+    let subtotal = Number(document.querySelector('#subtotal').value);
+    
+    if (subtotal <= 0) {
+        document.querySelector('#subtotal').value = "";
+        return;
+    }
 
+    let isClubMembership = document.querySelector('#member').checked;
+    
+    const discount = 0.15;
+
+    let total = 0;
+
+    if (isClubMembership) {
+        const applyDiscount = subtotal * discount;
+        total = (subtotal - applyDiscount).toFixed(2);
+        
+    } else {
+        total = subtotal;
+    }
+    document.querySelector('#total').innerHTML = `$${total}`;
+}
+
+document.querySelector('#getTotal').addEventListener('click', getTotalDue);
 
 /* ARRAY METHODS - Functional Programming */
 /* Output Source Array */
