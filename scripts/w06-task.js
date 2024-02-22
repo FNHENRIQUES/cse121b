@@ -5,29 +5,28 @@ let imagesElement = document.querySelector('#image');
 let imageList = [];
 
 /* async displayImages Function */
-const displayImages = (images) => {
+function displayImages(images) {
 
-    images.forEach((image) =>
-    {
+    images.forEach((images) => {
         const articleElement = document.createElement('article');
 
-        const h3Element = document.createElement('h3')
+        const h3Element = document.createElement('h3');
         h3Element.textContent += image.imageName;
 
-        const imgElement = document.createElement ('img');
-        imgElement.setAttribute ('src', `${image.imageUrl}`);
-        imgElement.setAttribute ('alt', image.imageName);
-        imgElement.setAttribute ('width', "270em");
+        const imgElement = document.createElement('img');
+        imgElement.setAttribute('src', `${image.imageUrl}`);
+        imgElement.setAttribute('alt', image.imageName);
+        imgElement.setAttribute('width', "270em");
 
-        articleElement.appendChild (h3Element);
-        articleElement.appendChild (imgElement);
-        imagesElement.appendChild (articleElement);
+        articleElement.appendChild(h3Element);
+        articleElement.appendChild(imgElement);
+        imagesElement.appendChild(articleElement);
     });
-}; 
+} 
 
 /* async getImages Function using fetch()*/
 const getImages = async () => {
-    const response = await fetch("https://gist.github.com/prayagKhanal/8cdd00d762c48b84a911eca2e2eb3449.js");
+    const response = await fetch("https://run.mocky.io/v3/92fc2060-943e-45cd-bf37-4cae3d5937c1");
 
     imageList.push(await response.json());
     displayImages(imageList[0]);
